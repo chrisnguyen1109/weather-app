@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="icon" type="image/png" href="/images/icons8-climate-64.png" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body oncontextmenu='return false'>
+    <div class="container-fluid">
+        <div class="search-container">
+            <div class="search-box">
+                <button class="btn-search"><i class="fas fa-search"></i></button>
+                <input type="text" class="input-search" placeholder="Type Location to Search..." />
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-weather">
+                <div class="card p-4">
+                    <div class="load-3 text-center">
+                        <p>Fetching...</p>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="d-flex">
+                        <h6 id="region" class="flex-grow-1"></h6>
+                        <h6 id="localtime"></h6>
+                    </div>
+                    <div class="d-flex flex-column temp mt-5 mb-3">
+                        <h1 id="temperature" class="mb-0 font-weight-bold" id="heading"></h1>
+                        <span id="weather_descriptions" class="small grey"></span>
+                    </div>
+                    <div class="d-flex">
+                        <div class="temp-details flex-grow-1">
+                            <p class="my-1">
+                                <i class="fas fa-temperature-high"></i> <span id="feelslike"> </span>
+                            </p>
+                            <p class="my-1">
+                                <i class="fas fa-wind"></i> <span id="wind_speed"> </span>
+                            </p>
+                            <p class="my-1">
+                                <i class="fa fa-tint mr-2"></i> <span id="humidity"></span>
+                            </p>
+                        </div>
+                        <div><img id="weather_icons" width="100px" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

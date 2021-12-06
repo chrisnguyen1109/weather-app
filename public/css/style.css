@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+:root {
+    --primary-color: #4b515d;
+    --width: 500px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    display: flex;
+    background-color: var(--primary-color);
+}
+
+.container-fluid {
+    margin: auto;
+}
+
+.search-container {
+    display: flex;
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+.search-box {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+
+.input-search {
+    height: 50px;
+    width: 50px;
+    border-style: none;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all 0.5s ease-in-out;
+    background-color: #22a6b3;
+    padding-right: 40px;
+    color: #fff;
+}
+
+.input-search::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
+.btn-search {
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none !important;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    color: #ffffff;
+    background-color: transparent;
+    pointer-events: painted;
+}
+
+.btn-search:focus ~ .input-search {
+    width: var(--width);
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+
+.input-search:focus {
+    width: var(--width);
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+
+.col-weather {
+    width: calc(var(--width) + 100px);
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 50px;
+    color: #6f707d;
+    font-family: 'Marcellus', serif;
+}
+
+#heading {
+    font-size: 55px;
+    color: #2b304d;
+}
+
+.temp {
+    place-items: center;
+}
+
+.temp-details > p > span,
+.grey {
+    color: var(--primary-color);
+    font-size: 12px;
+}
+
+.fa {
+    color: var(--primary-color);
+}
+
+*:focus {
+    outline: none;
+}
+
+.col-weather.loading .load-3 {
+    display: block;
+}
+
+.col-weather.loading .d-flex {
+    display: none !important;
+}
+
+.load-3 {
+    display: none;
+}
+
+.line {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background-color: #4b9cdb;
+}
+
+.load-3 .line:nth-last-child(1) {
+    animation: loadingC 0.6s 0.1s linear infinite;
+}
+.load-3 .line:nth-last-child(2) {
+    animation: loadingC 0.6s 0.2s linear infinite;
+}
+.load-3 .line:nth-last-child(3) {
+    animation: loadingC 0.6s 0.3s linear infinite;
+}
+
+@keyframes loadingC {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, 15px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
